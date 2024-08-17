@@ -55,6 +55,6 @@ def key_activated(connection, key_value):
     result = cursor.fetchone()
     return bool(result[0])
 
-
+# You can test your methods here
 if __name__ == "__main__":
     print(select_key("UCFP9Z0OZGWAD75XTSRXN211"))
