@@ -15,7 +15,6 @@ yarn install
 pip install -r requirements.txt
 
 yarn keygen
-$ Enter the number of keys to be generated: 20 (For example)
 ```
 
 ## Provide your BOT_TOKEN to .env<br/>You can get it here - https://t.me/BotFather
