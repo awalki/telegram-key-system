@@ -1,8 +1,9 @@
 # How to install?
 
-Install Node.js 20 LTS - https://nodejs.org/en<br/>
-Install latest python version - https://www.python.org/<br/>
-Install SQLiteStudio for database managment - https://sqlitestudio.pl/<br/>
+## Dependencies
+- Python 3.12.5
+- Node.js 20.16.0
+- SQLiteStudio (optional, but it's more comfortable)
 
 ## Clone Repo
 ```
