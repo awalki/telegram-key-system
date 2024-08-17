@@ -1,5 +1,7 @@
 import asyncio
 import os
+import logging
+import sys
 
 from os import getenv
 from aiogram import Bot, Dispatcher
@@ -20,14 +22,12 @@ TOKEN = getenv("BOT_TOKEN")
 @dp.message(CommandStart())
 async def start_handler(message: Message, dialog_manager: DialogManager):
     try:
-        await message.answer("Добро пожаловать в систему ключей!")
-
         if not user_exists(message.from_user.id):
             await dialog_manager.start(state=KeySG.key, mode=StartMode.RESET_STACK, data={"user_id": message.from_user.id})
         else:
-            await message.answer(f"Добро пожаловать, похоже вы уже активировали ключ\n\nВаш айди: {message.from_user.id}")
+            await message.answer(f"Welcome to the key system, you have already activated the key\n\nYour ID: {message.from_user.id}")
     except Exception as e:
-        print("Уп-с, ошибочка!\nУбедитесь, что сначала сгенерировали ключи в keygen", e)
+        print("Oops!\nMake sure to generate the keys first", e)
 
 async def main():
     bot = Bot(TOKEN)
@@ -36,4 +36,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())

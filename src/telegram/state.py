@@ -26,7 +26,7 @@ def key_check(text: str):
 async def success_handler(message: Message, widget: ManagedTextInput, dialog_manager: DialogManager, text: str) -> None:
     start_data = dialog_manager.start_data["user_id"]
 
-    await message.answer(text=f'Ключ активирован и привязан к вашему ID\n\nВаш ID: {start_data}')
+    await message.answer(text=f'The key has been activated, it was tied to your account\n\nYour ID: {start_data}')
     edit_column_values(text, start_data)
 
     await dialog_manager.done()
@@ -37,12 +37,12 @@ async def invalid_handler(
     dialog_manager: DialogManager,
     error: ValueError
 ):
-    await message.answer("Неверный ключ")
+    await message.answer("Invalid key")
 
 async def cancel_click_process(callback: CallbackQuery,
     widget: Button,
     dialog_manager: DialogManager):
-    await callback.message.edit_text("Отменено")
+    await callback.message.edit_text("Canceled")
     await dialog_manager.mark_closed()
 
 async def username_getter(dialog_manager: DialogManager, event_from_user: User, **kwargs):
@@ -53,7 +53,7 @@ async def username_getter(dialog_manager: DialogManager, event_from_user: User, 
 
 key_dialog = Dialog(
     Window(
-        Format("Введите ключ доступа: "),
+        Format("Welcome to the key system\n\nEnter an access key: "),
         TextInput(
             id="key",
             type_factory=key_check,
@@ -61,7 +61,7 @@ key_dialog = Dialog(
             on_error=invalid_handler,
         ),
         Button(
-            text=Const("Отменить"),
+            text=Const("Cancel"),
             id="cancel",
             on_click=cancel_click_process,
         ),

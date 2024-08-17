@@ -35,7 +35,7 @@ async function main() {
         )
     `);
 
-    const count = await getAnswer("Введите кол-во генерируемых ключей: ");
+    const count = await getAnswer("Enter the number of keys to be generated: ");
 
     const keys = await generateKeys(count);
 
@@ -45,7 +45,7 @@ async function main() {
             VALUES (?, ?)`, key, false);
     }
 
-    console.log(`${count} ключей успешно записаны в базу данных.`);
+    console.log(`${count} keys were successfully recorded into the database.`);
 
     await db.close();
 }
