@@ -14,6 +14,7 @@ BOT_TOKEN = YOUR BOT_TOKEN
 ```
 ## Run run_win.bat to activate key system.
 > First you need to generate keys, after run telegram bot
+> 
 > You can get keys in keys.db (double click the file and SQLiteStudio should be opened)<br/>Provide that key to telegram bot
 
 That's all. If all steps were correct your bot should be work.
