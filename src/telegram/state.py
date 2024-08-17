@@ -8,7 +8,7 @@ from aiogram_dialog.widgets.input import ManagedTextInput, TextInput
 from aiogram_dialog.widgets.kbd import Button
 from aiogram_dialog.widgets.text import Format, Const
 
-from src.telegram.db import select_key, edit_column_values, key_activated
+from src.telegram.db import select_key, edit_column_values, user_exists, key_activated
 
 
 class KeySG(StatesGroup):

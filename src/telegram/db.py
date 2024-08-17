@@ -1,8 +1,12 @@
 import sqlite3
+import pathlib
+from pathlib import Path
+
+db_path = Path("keys.db")
 
 def with_connection(func):
     def wrapper(*args, **kwargs):
-        connection = sqlite3.connect("C:/Users/Nazar/Desktop/workdir/keysystem/keys.db")
+        connection = sqlite3.connect(db_path)
         try:
             result = func(connection, *args, **kwargs)
             connection.commit()
@@ -17,7 +21,7 @@ def edit_column_values(connection, key_value, user_id):
     cursor.execute(
         """
         UPDATE keys
-        SET activated = 1, activated_by = ?
+        SET activated_by = ?
         WHERE key = ? 
         """, (user_id, key_value)
     )
@@ -49,12 +53,16 @@ def key_activated(connection, key_value):
     cursor = connection.cursor()
     cursor.execute(
         """
-        SELECT EXISTS(SELECT 1 FROM keys WHERE key = ? AND activated = ?)
-        """, (key_value, True)  # Здесь True означает, что мы ищем активированные ключи
+        SELECT EXISTS(
+            SELECT 1 FROM keys 
+            WHERE key = ? AND activated_by != 0
+        )
+        """, (key_value,)
     )
     result = cursor.fetchone()
     return bool(result[0])
 
+
 # You can test your methods here
 if __name__ == "__main__":
-    print(select_key("UCFP9Z0OZGWAD75XTSRXN211"))
+    print(key_activated("8O7C64AFVWXGUAIJM38WGVWD"))
