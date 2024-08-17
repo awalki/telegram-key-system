@@ -25,6 +25,6 @@ BOT_TOKEN = YOUR BOT_TOKEN
 
 That's all. If all steps were correct your bot should be work.
 
-# Credits:
+## Credits:
 - aiogram
 - aiogram-dialog
