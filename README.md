@@ -21,8 +21,11 @@ BOT_TOKEN = YOUR BOT_TOKEN
 
 Run setup_win.bat first, after successfull installation open run_win.bat
 
+You can get keys in keys.db (double click the file and SQLiteStudio should be opened)
+Provide that key to telegram bot
+
 That's all. If all steps were correct your bot should be work.
 ```
 # Credits:
-aiogram
-aiogram-dialog
+- aiogram
+- aiogram-dialog
