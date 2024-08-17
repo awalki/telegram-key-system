@@ -13,7 +13,7 @@ yarn keygen
 $ Enter the number of keys to be generated: 20 (For example)
 ```
 
-## That's all with keygen
+That's all with keygen
 
 ## Provide your BOT_TOKEN to .env<br/>You can get it here - https://t.me/BotFather
 ```
@@ -21,10 +21,9 @@ BOT_TOKEN = YOUR BOT_TOKEN
 ```
 
 ## Run setup_win.bat first, after successfull installation open run_win.bat
+> You can get keys in keys.db (double click the file and SQLiteStudio should be opened)<br/>Provide that key to telegram bot
 
-## You can get keys in keys.db (double click the file and SQLiteStudio should be opened)<br/>Provide that key to telegram bot
-
-## That's all. If all steps were correct your bot should be work.
+That's all. If all steps were correct your bot should be work.
 
 # Credits:
 - aiogram
