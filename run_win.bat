@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-:: Создание меню выбора
+:: Choice menu
 echo 1. Open keygen
 echo 2. Open telegram bot
 set /p choice="Choose action (1 or 2): "
@@ -30,7 +30,7 @@ if "%choice%"=="2" (
 	yarn keygen
 )
 ) else (
-    echo Неверный выбор. Пожалуйста, выберите 1 или 2.
+    echo Invalid choice! Please select 1 or 2.
 )
 
 pause
