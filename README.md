@@ -14,7 +14,7 @@ $ Enter the number of keys to be generated: 20 (For example)
 
 That's all with keygen
 
-Provide your BOT_TOKEN to .env in the root dir
+Provide your BOT_TOKEN to .env
 You can get it here - https://t.me/BotFather
 
 BOT_TOKEN = YOUR BOT_TOKEN
