@@ -10,14 +10,16 @@ yarn install
 pip install -r requirements.txt
 
 yarn keygen
-$ Enter the number of keys to be generated: 20 (For example)```
+$ Enter the number of keys to be generated: 20 (For example)
+```
 
 That's all with keygen
 
 Provide your BOT_TOKEN to .env
 You can get it here - https://t.me/BotFather
-
-```BOT_TOKEN = YOUR BOT_TOKEN```
+```
+BOT_TOKEN = YOUR BOT_TOKEN
+```
 
 Run setup_win.bat first, after successfull installation open run_win.bat
 
