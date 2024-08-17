@@ -22,7 +22,7 @@ yarn keygen
 BOT_TOKEN = YOUR BOT_TOKEN
 ```
 
-## Run setup_win.bat first, after successfull installation open run_win.bat
+## Run run_win.bat to activate telegram bot
 > You can get keys in keys.db (double click the file and SQLiteStudio should be opened)<br/>Provide that key to telegram bot
 
 That's all. If all steps were correct your bot should be work.
