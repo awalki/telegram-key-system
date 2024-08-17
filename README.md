@@ -4,6 +4,11 @@ Install Node.js 20 LTS - https://nodejs.org/en<br/>
 Install latest python version - https://www.python.org/<br/>
 Install SQLiteStudio for database managment - https://sqlitestudio.pl/<br/>
 
+## Clone Repo
+```
+git clone https://github.com/awalking/telegram-key-system.git
+```
+
 ## Open cmd in the root dir
 ```npm i -g yarn
 yarn install
