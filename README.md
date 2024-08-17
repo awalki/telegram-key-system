@@ -13,8 +13,6 @@ yarn keygen
 $ Enter the number of keys to be generated: 20 (For example)
 ```
 
-That's all with keygen
-
 ## Provide your BOT_TOKEN to .env<br/>You can get it here - https://t.me/BotFather
 ```
 BOT_TOKEN = YOUR BOT_TOKEN
