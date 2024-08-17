@@ -1,0 +1,19 @@
+{
+  "name": "keysystem",
+  "version": "1.0.0",
+  "main": "./dist/keygen/index.js",
+  "author": "awalki",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "generate-password": "^1.7.1",
+    "inquirer": "^10.1.8",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "telegraf": "^4.16.3",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "keygen": "node ./dist/keygen/keygen.js"
+  }
+}
