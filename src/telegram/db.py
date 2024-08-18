@@ -1,5 +1,4 @@
 import sqlite3
-import pathlib
 from pathlib import Path
 
 db_path = Path("keys.db")

@@ -9,14 +9,17 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 from aiogram_dialog import DialogManager, StartMode, setup_dialogs
 from dotenv import load_dotenv
+from pathlib import Path
 
 from src.telegram.db import user_exists
 from src.telegram.state import key_dialog, KeySG
 
-dp = Dispatcher()
-env_path = os.path.join('keysystem', '.env')
+env_path = Path(".env")
 load_dotenv(dotenv_path=env_path)
+
+dp = Dispatcher()
 TOKEN = getenv("BOT_TOKEN")
+bot = Bot(TOKEN)
 
 
 @dp.message(CommandStart())
@@ -29,8 +32,8 @@ async def start_handler(message: Message, dialog_manager: DialogManager):
     except Exception as e:
         print("Oops!\nMake sure to generate the keys first", e)
 
+
 async def main():
-    bot = Bot(TOKEN)
     dp.include_routers(key_dialog)
     setup_dialogs(dp)
     await dp.start_polling(bot)
