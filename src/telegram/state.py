@@ -1,6 +1,3 @@
-import asyncio
-from turtledemo.penrose import start
-
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.types import CallbackQuery, User, Message
 from aiogram_dialog import DialogManager, Dialog, Window, StartMode
@@ -8,7 +5,7 @@ from aiogram_dialog.widgets.input import ManagedTextInput, TextInput
 from aiogram_dialog.widgets.kbd import Button
 from aiogram_dialog.widgets.text import Format, Const
 
-from src.telegram.db import select_key, edit_column_values, user_exists, key_activated
+from src.telegram.db import select_key, edit_column_values, key_activated
 
 
 class KeySG(StatesGroup):
