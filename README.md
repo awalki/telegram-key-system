@@ -7,7 +7,7 @@
 
 ## Clone Repo
 ```
-git clone https://github.com/awalking/telegram-key-system.git
+git clone https://github.com/awalki/telegram-key-system.git
 ```
 ## Provide your BOT_TOKEN to .env<br/>You can get it here - https://t.me/BotFather
 ```
